@@ -1,4 +1,4 @@
-rm(list=ls())  #Clear lists
+#rm(list=ls())  #Clear lists
 
 options(scipen = 999)
 
@@ -421,9 +421,3 @@ clean17 <- clean16 %>%
 
 setwd("/Users/ellyknight/Documents/UoA/Projects/Projects/MCP2/Analysis/Data")
 write.csv(clean17, "CONIMCP_CleanDataAll.csv", row.names = FALSE)
-
-#Select just locations and bare bones metadata for GEE----
-clean18 <- clean17 %>% 
-  dplyr::select(PinpointID, DateTime, Season2, Long, Lat)
-
-write.csv(clean18, "CONIMCP_CleanDataAll_GEE.csv", row.names = FALSE)
